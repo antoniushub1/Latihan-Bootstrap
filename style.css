@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.header {
+    background-image: url("img/langit1.png");
+}
+
+a {
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    background-image: url("img/langit2.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero h1 span {
+    color: #60a5fa;
+}
+
+.hero img {
+    max-height: 350px;
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.box {
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: #f1f5f9;
+}
+
+.box img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.about {
+    background-image: url("img/langit2.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.about img {
+    max-height: 350px;
+    color: white;
+}
+
+#contact img {
+    max-height: 300px;
+}
+
+.footer {
+    padding: 25px;
+    background-color: #172554;
+    color: white;
+}
+.serviss{
+    background-image: url("img/langit1.png");
+}
+.kontak{
+    background-image: url("img/langit1.png");
+    color: white;
+}
+
