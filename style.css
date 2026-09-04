@@ -1,88 +1,169 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#020617}
+.container{padding-top:20px;padding-bottom:20px}
+
+.header{
+    background:linear-gradient(135deg,#020617,#0f172a,#172554);
+    border-bottom:1px solid rgba(255,255,255,.1);
+    position:sticky;top:0;z-index:1000
+}
+.header img{transition:.3s}
+.header img:hover{transform:rotate(10deg) scale(1.1)}
+.header a{
+    color:white;text-decoration:none;margin-left:25px;
+    font-weight:500;transition:.3s
+}
+.header a:hover{color:#60a5fa}
+
+.hero{
+    min-height:600px;display:flex;align-items:center;
+    background:
+    radial-gradient(circle at 80% 30%,rgba(59,130,246,.25),transparent 25%),
+    radial-gradient(circle at 20% 80%,rgba(139,92,246,.2),transparent 25%),
+    linear-gradient(135deg,#020617,#0f172a 50%,#172554);
+    color:white;position:relative;overflow:hidden
+}
+.hero h1{font-size:50px;font-weight:700}
+.hero h3{color:#93c5fd}
+.hero img{
+    max-height:350px;
+    filter:drop-shadow(0 0 25px rgba(96,165,250,.5));
+    animation:floating 4s ease-in-out infinite
 }
 
-.container {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    
-}
-.header {
-    background-image: url("img/langit1.png");
+@keyframes floating{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-15px)}
+    100%{transform:translateY(0)}
 }
 
-a {
-    text-decoration: none;
-    margin-left: 15px;
+.btn-primary{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    border:none;padding:12px 25px;border-radius:30px;
+    box-shadow:0 8px 20px rgba(37,99,235,.3);
+    transition:.3s
+}
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(37,99,235,.5)
 }
 
-.hero {
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    background-image: url("img/langit2.png");
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
+.section{padding-top:60px;padding-bottom:60px}
 
-.hero h1 {
-    font-size: 50px;
-}
-
-.hero h1 span {
-    color: #60a5fa;
-}
-
-.hero img {
-    max-height: 350px;
-}
-
-.section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-.box {
-    padding: 30px;
-    margin-top: 20px;
-    border-radius: 15px;
-    background-color: #f1f5f9;
-}
-
-.box img {
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
-}
-
-.about {
-    background-image: url("img/langit2.png");
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-
-.about img {
-    max-height: 350px;
-    color: white;
-}
-
-#contact img {
-    max-height: 300px;
-}
-
-.footer {
-    padding: 25px;
-    background-color: #172554;
-    color: white;
-}
 .serviss{
-    background-image: url("img/langit1.png");
-}
-.kontak{
-    background-image: url("img/langit1.png");
-    color: white;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(59,130,246,.15),transparent 25%),
+    radial-gradient(circle at 80% 70%,rgba(139,92,246,.15),transparent 25%),
+    linear-gradient(135deg,#020617,#0f172a);
+    position:relative;overflow:hidden
 }
 
+.services-title{color:white;margin-bottom:30px}
+.section-label{
+    color:#60a5fa;font-size:14px;font-weight:bold;
+    letter-spacing:3px
+}
+.services-title h2{font-size:42px;font-weight:700;margin-top:8px}
+.services-title p{color:#cbd5e1}
+
+.box{
+    padding:30px 25px;min-height:290px;border-radius:20px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    color:white;transition:.4s
+}
+.box:hover{
+    transform:translateY(-10px);
+    border-color:rgba(96,165,250,.5);
+    box-shadow:0 20px 40px rgba(0,0,0,.4)
+}
+
+.icon-box{
+    width:90px;height:90px;margin:0 auto 20px;
+    border-radius:25px;
+    display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    box-shadow:0 10px 25px rgba(37,99,235,.35);
+    transition:.4s
+}
+.icon-box i{font-size:42px;color:white}
+.box:hover .icon-box{transform:rotate(8deg) scale(1.1)}
+.box h3{font-size:23px;margin-bottom:12px}
+.box p{color:#cbd5e1;line-height:1.6}
+
+.aboutbackground{
+    background:
+    radial-gradient(circle at 70% 30%,rgba(59,130,246,.2),transparent 25%),
+    linear-gradient(135deg,#0f172a,#020617);
+    position:relative;overflow:hidden
+}
+.about{color:white}
+.about img{
+    max-height:350px;
+    filter:drop-shadow(0 0 30px rgba(96,165,250,.4));
+    animation:floating 4s ease-in-out infinite
+}
+
+.kontak{
+    background:
+    radial-gradient(circle at 30% 30%,rgba(124,58,237,.18),transparent 25%),
+    linear-gradient(135deg,#020617,#172554);
+    color:white;position:relative;overflow:hidden
+}
+.kontak img{
+    max-height:300px;
+    filter:drop-shadow(0 0 30px rgba(96,165,250,.4))
+}
+.kontak .form-control{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);
+    color:white;border-radius:10px;padding:12px
+}
+.kontak .form-control:focus{
+    background:rgba(255,255,255,.12);
+    color:white;border-color:#60a5fa;
+    box-shadow:0 0 0 3px rgba(96,165,250,.15)
+}
+.kontak .form-control::placeholder{color:#94a3b8}
+
+.footer{
+    padding:25px;
+    background:linear-gradient(135deg,#020617,#172554);
+    color:#cbd5e1;
+    border-top:1px solid rgba(255,255,255,.1)
+}
+.footer p{margin:0}
+
+@media(max-width:768px){
+    .hero{text-align:center;padding:50px 0}
+    .hero h1{font-size:36px}
+    .hero img{margin-top:30px;max-height:280px}
+    .header a{margin-left:10px;font-size:14px}
+    .services-title h2{font-size:34px}
+}
+.service-icon{
+    width:120px;
+    height:120px;
+    margin:0 auto 20px;
+    padding:15px;
+    border-radius:25px;
+    background:rgba(255,255,255,.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+}
+
+.service-icon img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    filter:drop-shadow(0 0 10px rgba(96,165,250,.4));
+}
+
+.box:hover .service-icon{
+    transform:translateY(-5px) scale(1.05);
+    background:rgba(255,255,255,.15);
+}
