@@ -1,162 +1,255 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
 
-    <!-- Bootstrap 5.3 -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- CSS sendiri -->
     <link rel="stylesheet" href="style.css">
-</head>
 
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
 <body>
 
-<!-- HEADER -->
-<div class="header">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col">
-                <img src="img/logo.png" alt="Logo" width="60">
-            </div>
-
-            <div class="col text-end">
-                <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- HERO -->
-<div id="home" class="hero">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col">
-                <p>WELCOME TO MY PORTFOLIO</p>
-                <h1>Hello, I'm Antonius Rama</h1>
-                <h3>Mahasiswa Politeknik Atmi Surakarta</h3>
-                <p>Saya sedang belajar membuat website dengan HTML, CSS, dan Bootstrap.</p>
-                <a href="#contact" class="btn btn-primary">Contact Me</a>
-            </div>
-
-            <div class="col text-center">
-                <img src="img/rocket.png" alt="Rocket" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</div>
-
-```html
-<!-- SERVICES -->
-<div class="serviss">
-    <div id="services" class="container section">
-        <div class="text-center text-white">
-            <h2>Services</h2>
-            <p>Beberapa hal yang saya kerjakan.</p>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="box text-center">
-                    <div class="service-icon">
-                        <img src="img/services.png" alt="Web Development">
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Membuat website menggunakan HTML, CSS, dan Bootstrap.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="box text-center">
-                    <div class="service-icon">
-                        <img src="img/sensoricon.png" alt="Sensorik">
-                    </div>
-                    <h3>Sensorik</h3>
-                    <p>Membuat rangkaian sensor sederhana.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="box text-center">
-                    <div class="service-icon">
-                        <img src="img/PLCicon.png" alt="PLC">
-                    </div>
-                    <h3>PLC</h3>
-                    <p>Membuat program PLC sederhana.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- ABOUT -->
-<div class="aboutbackground">
-    <div id="about" class="about section">
+    <!-- HEADER -->
+    <div class="header">
         <div class="container">
-            <div class="text-center">
-                <h2>About Me</h2>
-                <p>Kenali saya lebih jauh.</p>
-            </div>
-
             <div class="row align-items-center">
-                <div class="col text-center">
-                    <img src="img/ikonastronot-removebg-preview.png" alt="About Me" class="img-fluid">
-                </div>
-
                 <div class="col">
-                    <h2>Saya Antonius</h2>
-                    <p>Saya adalah seorang Mahasiswa Tingkat 3 Politeknik Atmi Surakarta</p>
-                    <p>Saat ini saya sedang belajar HTML, CSS, Bootstrap, dan JavaScript.</p>
-
-                    <p>
-                        <span class="badge text-bg-primary">HTML</span>
-                        <span class="badge text-bg-secondary">CSS</span>
-                        <span class="badge text-bg-success">Bootstrap</span>
-                        <span class="badge text-bg-warning">JavaScript</span>
-                    </p>
+                    <img src="img/logo.png" alt="Logo" width="60">
+                </div>
+                <div class="col text-end">
+                    <a href="#home" class="menu active">Home</a>
+                    <a href="#services" class="menu">Services</a>
+                    <a href="#about" class="menu">About</a>
+                    <a href="#contact" class="menu">Contact</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- CONTACT -->
-<div class="kontak">
-<div id="contact" class="container section">
-    <div class="text-center">
-        <h2>Contact</h2>
-        <p>Silakan hubungi saya.</p>
-    </div>
-
-    <div class="row">
-        <div class="col text-center">
-            <img src="img/astronot kontak.png" alt="Contact" class="img-fluid">
-        </div>
-
-        <div class="col">
-            <form>
-                <label class="form-label">Nama</label>
-                <input type="text" class="form-control mb-3" placeholder="Nama kamu">
-
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control mb-3" placeholder="Email kamu">
-
-                <label class="form-label">Pesan</label>
-                <textarea class="form-control mb-3" rows="5" placeholder="Tulis pesan..."></textarea>
-
-                <button class="btn btn-primary">Kirim</button>
-            </form>
+    <!-- HOME -->
+    <div id="home" class="hero section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <p>WELCOME TO MY PORTFOLIO</p>
+                    <h1>Hello, I'm Antonius Rama</h1>
+                    <h3>Mahasiswa Politeknik Atmi Surakarta</h3>
+                    <p>Saya sedang belajar membuat website dengan HTML, CSS, dan Bootstrap.</p>
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
+                </div>
+                <div class="col text-center">
+                    <img src="img/rocket.png" alt="Rocket" class="img-fluid">
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
-<!-- FOOTER -->
-<div class="footer text-center">
-    <p>Antonius Rama Moriska</p>
-</div>
 
+    <!-- SERVICES -->
+    <div class="serviss">
+        <div id="services" class="container section">
+            <div class="text-center text-white">
+                <h2>Services</h2>
+                <p>Beberapa hal yang saya kerjakan.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- SERVICE 1 -->
+                <div class="col-md-4">
+                    <div class="box text-center">
+                        <div class="service-icon">
+                            <img src="img/services.png" alt="Web Development">
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Membuat website menggunakan HTML, CSS, dan Bootstrap.</p>
+                    </div>
+                </div>
+
+                <!-- SERVICE 2 -->
+                <div class="col-md-4">
+                    <div class="box text-center">
+                        <div class="service-icon">
+                            <img src="img/sensoricon.png" alt="Sensorik">
+                        </div>
+                        <h3>Sensorik</h3>
+                        <p>Membuat rangkaian sensor sederhana.</p>
+                    </div>
+                </div>
+
+                <!-- SERVICE 3 -->
+                <div class="col-md-4">
+                    <div class="box text-center">
+                        <div class="service-icon">
+                            <img src="img/PLCicon.png" alt="PLC">
+                        </div>
+                        <h3>PLC</h3>
+                        <p>Membuat program PLC sederhana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="aboutbackground">
+        <div id="about" class="about section">
+            <div class="container">
+                <div class="text-center">
+                    <h2>About Me</h2>
+                    <p>Kenali saya lebih jauh.</p>
+                </div>
+
+                <div class="row align-items-center">
+                    <!-- FOTO -->
+                    <div class="col text-center">
+                        <img src="img/ikonastronot-removebg-preview.png" alt="About Me" class="img-fluid">
+                    </div>
+
+                    <!-- TENTANG -->
+                    <div class="col">
+                        <h2>Saya Antonius</h2>
+                        <p>Saya adalah seorang Mahasiswa Tingkat 3 Politeknik Atmi Surakarta.</p>
+                        <p>Saat ini saya sedang belajar HTML, CSS, Bootstrap, dan JavaScript.</p>
+                        <p>
+                            <span class="badge text-bg-primary">HTML</span>
+                            <span class="badge text-bg-secondary">CSS</span>
+                            <span class="badge text-bg-success">Bootstrap</span>
+                            <span class="badge text-bg-warning">JavaScript</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- GRAFIK -->
+                <div class="chart-box">
+                    <h3 class="text-center">Tingkat Kemampuan</h3>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="kontak">
+        <div id="contact" class="container section">
+            <div class="text-center">
+                <h2>Contact</h2>
+                <p>Silakan hubungi saya.</p>
+            </div>
+
+            <div class="row">
+                <!-- GAMBAR -->
+                <div class="col text-center">
+                    <img src="img/astronot kontak.png" alt="Contact" class="img-fluid">
+                </div>
+
+                <!-- FORM -->
+                <div class="col">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Nama</label>
+                            <input type="text" class="form-control" placeholder="Nama kamu">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Email kamu">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Pesan</label>
+                            <textarea class="form-control" rows="5" placeholder="Tulis pesan..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer text-center">
+        <p>Antonius Rama Moriska</p>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // =========================
+        // MENU ACTIVE + AUTOSCROLL
+        // =========================
+        const menu = document.querySelectorAll(".menu");
+
+        menu.forEach(function(item) {
+            item.addEventListener("click", function(event) {
+                // Mencegah link langsung berpindah
+                event.preventDefault();
+
+                // Menghapus active dari semua menu
+                menu.forEach(function(menuItem) {
+                    menuItem.classList.remove("active");
+                });
+
+                // Memberikan active ke menu yang diklik
+                item.classList.add("active");
+
+                // Mengambil id dari href
+                const id = item.getAttribute("href");
+
+                // Mengambil section
+                const section = document.querySelector(id);
+
+                // Scroll secara halus
+                section.scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        window.addEventListener("scroll", function() {
+    const sections = document.querySelectorAll(".section");
+
+    sections.forEach(function(section) {
+        const posisi = section.getBoundingClientRect().top;
+
+        if (posisi <= 150 && posisi > -section.offsetHeight + 150) {
+            menu.forEach(function(item) {
+                item.classList.remove("active");
+            });
+
+            const id = section.getAttribute("id");
+            const link = document.querySelector(`.menu[href="#${id}"]`);
+
+            if (link) {
+                link.classList.add("active");
+            }
+        }
+    });
+});
+
+        const ctx = document.getElementById("myChart");
+
+        new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["Web Development", "Sensorik", "PLC"],
+                datasets: [{
+                    label: "Tingkat Kemampuan (%)",
+                    data: [60, 75, 70]
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

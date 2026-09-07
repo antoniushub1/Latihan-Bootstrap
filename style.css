@@ -167,3 +167,28 @@ body{font-family:Arial,sans-serif;background:#020617}
     transform:translateY(-5px) scale(1.05);
     background:rgba(255,255,255,.15);
 }
+/* MENU ACTIVE */
+
+.header a.active {
+    color: #60a5fa;
+    border-bottom: 2px solid #60a5fa;
+    padding-bottom: 5px;
+}
+/* CHART */
+.chart-box {
+    max-width: 800px;
+    margin: 50px auto 0;
+    padding: 30px;
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    border-radius: 20px;
+
+    color: white;
+}
+
+.chart-box h3 {
+    margin-bottom: 30px;
+}
