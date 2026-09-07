@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +15,7 @@
     <!-- ChartJS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
     <!-- HEADER -->
@@ -177,58 +179,47 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // =========================
-        // MENU ACTIVE + AUTOSCROLL
-        // =========================
         const menu = document.querySelectorAll(".menu");
+        const sections = document.querySelectorAll("#home, #services, #about, #contact");
 
-        menu.forEach(function(item) {
-            item.addEventListener("click", function(event) {
-                // Mencegah link langsung berpindah
+        // MENU + AUTOSCROLL
+        menu.forEach(item => {
+            item.addEventListener("click", event => {
                 event.preventDefault();
-
-                // Menghapus active dari semua menu
-                menu.forEach(function(menuItem) {
-                    menuItem.classList.remove("active");
-                });
-
-                // Memberikan active ke menu yang diklik
-                item.classList.add("active");
-
-                // Mengambil id dari href
                 const id = item.getAttribute("href");
-
-                // Mengambil section
                 const section = document.querySelector(id);
 
-                // Scroll secara halus
-                section.scrollIntoView({
-                    behavior: "smooth"
-                });
+                if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                }
             });
         });
 
-        window.addEventListener("scroll", function() {
-    const sections = document.querySelectorAll(".section");
+        // MENU ACTIVE SAAT SCROLL
+        window.addEventListener("scroll", () => {
+            let current = "";
 
-    sections.forEach(function(section) {
-        const posisi = section.getBoundingClientRect().top;
-
-        if (posisi <= 150 && posisi > -section.offsetHeight + 150) {
-            menu.forEach(function(item) {
-                item.classList.remove("active");
+            sections.forEach(section => {
+                const posisi = section.getBoundingClientRect().top;
+                if (posisi <= 150) {
+                    current = section.id;
+                }
             });
-
-            const id = section.getAttribute("id");
-            const link = document.querySelector(`.menu[href="#${id}"]`);
-
-            if (link) {
-                link.classList.add("active");
+            const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 10;
+            if (isAtBottom) {
+                current = "contact";
             }
-        }
-    });
-});
+            menu.forEach(item => item.classList.remove("active"));
 
+            if (current) {
+                const link = document.querySelector(`.menu[href="#${current}"]`);
+                if (link) {
+                    link.classList.add("active");
+                }
+            }
+        });
+
+        // CHART JS
         const ctx = document.getElementById("myChart");
 
         new Chart(ctx, {
@@ -251,5 +242,6 @@
             }
         });
     </script>
+
 </body>
-</html>
+</html> 
