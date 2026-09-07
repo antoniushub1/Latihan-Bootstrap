@@ -2,6 +2,7 @@
 <html lang="id">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
@@ -177,12 +178,10 @@
         <p>Antonius Rama Moriska</p>
     </div>
 
-    <!-- JAVASCRIPT -->
     <script>
         const menu = document.querySelectorAll(".menu");
         const sections = document.querySelectorAll("#home, #services, #about, #contact");
 
-        // MENU + AUTOSCROLL
         menu.forEach(item => {
             item.addEventListener("click", event => {
                 event.preventDefault();
@@ -195,7 +194,6 @@
             });
         });
 
-        // MENU ACTIVE SAAT SCROLL
         window.addEventListener("scroll", () => {
             let current = "";
 
@@ -219,7 +217,6 @@
             }
         });
 
-        // CHART JS
         const ctx = document.getElementById("myChart");
 
         new Chart(ctx, {
