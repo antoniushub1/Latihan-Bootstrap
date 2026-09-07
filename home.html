@@ -219,25 +219,63 @@
 
         const ctx = document.getElementById("myChart");
 
-        new Chart(ctx, {
-            type: "bar",
-            data: {
-                labels: ["Web Development", "Sensorik", "PLC"],
-                datasets: [{
-                    label: "Tingkat Kemampuan (%)",
-                    data: [60, 75, 70]
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 100
-                    }
+new Chart(ctx, {
+    type: "bar",
+    data: {
+        labels: ["Web Development", "Sensorik", "PLC"],
+        datasets: [{
+            label: "Tingkat Kemampuan (%)",
+            data: [60, 75, 70],
+            // Warna batang grafik dengan sedikit transparansi
+            backgroundColor: [
+                'rgba(96, 165, 250, 0.8)',
+                'rgba(168, 85, 247, 0.8)',
+                'rgba(52, 211, 153, 0.8)'
+            ],
+            // Warna garis pinggir batang
+            borderColor: [
+                '#60a5fa',
+                '#a855f7',
+                '#34d399'
+            ],
+            borderWidth: 2,
+            borderRadius: 8
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                labels: {
+                    color: '#ffffff', // Warna teks judul legenda (putih terang)
+                    font: { size: 14 }
                 }
             }
-        });
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: '#e2e8f0' // Warna teks label X (Web Dev, Sensorik, PLC)
+                },
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.2)', // Garis kisi vertikal (putih transparan)
+                    lineWidth: 1
+                }
+            },
+            y: {
+                beginAtZero: true,
+                max: 100,
+                ticks: {
+                    color: '#e2e8f0' // Warna angka 0, 20, 40, dst.
+                },
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.2)', // Garis kisi horizontal (putih transparan)
+                    lineWidth: 1
+                }
+            }
+        }
+    }
+});
     </script>
 
 </body>
